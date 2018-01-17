@@ -7,12 +7,19 @@
     >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VueJS Examples</title>
+
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 <script src="https://unpkg.com/vue"></script>
 
 <div id="app">
+    <span @click="changeText">Text</span>
+
     <p>{{ title }}</p>
+    <p :class="title2">Color: {{ title2 }}</p>
+
+    <input type="text" @input="inputText" placeholder="Type color name">
 </div>
 
 <script src="./js/main.js"></script>
