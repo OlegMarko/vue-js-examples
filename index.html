@@ -14,12 +14,20 @@
 <script src="https://unpkg.com/vue"></script>
 
 <div id="app">
-    <span @click="changeText">Text</span>
+    <button @click="toggleText">Hide/Show</button> <br>
 
-    <p>{{ title }}</p>
-    <p :class="title2">Color: {{ title2 }}</p>
+    <span v-if="show">Some text (v-if)</span>
+    <span v-else>Some text (v-else)</span>
+    <br>
 
-    <input type="text" @input="inputText" placeholder="Type color name">
+    <span v-show="show">Some text(v-show)</span>
+
+    <hr>
+    <p>Cars</p>
+
+    <ul>
+        <li v-for="(car, key) in cars">{{ key + 1 }} - {{ car.model }} / {{ car.speed }}</li>
+    </ul>
 </div>
 
 <script src="./js/main.js"></script>

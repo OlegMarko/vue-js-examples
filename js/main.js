@@ -1,15 +1,20 @@
 new Vue({
     el: '#app',
     data: {
-        title: 'Hello World',
-        title2: ''
+        show: true,
+        cars: [
+            {model: "BMW", speed: 250.8},
+            {model: "Audi", speed: 240.55},
+            {model: "Mercedes-Benz AMG", speed: 350.05},
+            {model: "Ford", speed: 160.75}
+        ]
     },
     methods: {
-        changeText () {
-            this.title = 'Text';
-        },
-        inputText (event) {
-            this.title2 = event.target.value;
+        toggleText () {
+            this.show = !this.show
         }
+    },
+    computed: {
+        //
     }
 });
