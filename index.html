@@ -14,20 +14,7 @@
 <script src="https://unpkg.com/vue"></script>
 
 <div id="app">
-    <button @click="toggleText">Hide/Show</button> <br>
-
-    <span v-if="show">Some text (v-if)</span>
-    <span v-else>{{ showMessage | lowercase | capitalize }}</span>
-    <br>
-
-    <span v-show="show">Some text(v-show)</span>
-
-    <hr>
-    <p>Cars</p>
-
-    <ul>
-        <li v-for="(car, key) in cars">{{ key + 1 }} - {{ car.model | capitalize }} / {{ car.speed }}</li>
-    </ul>
+    <cars></cars>
 </div>
 
 <script src="./js/main.js"></script>
