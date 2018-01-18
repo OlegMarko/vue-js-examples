@@ -17,7 +17,7 @@
     <button @click="toggleText">Hide/Show</button> <br>
 
     <span v-if="show">Some text (v-if)</span>
-    <span v-else>Some text (v-else)</span>
+    <span v-else>{{ showMessage | lowercase | capitalize }}</span>
     <br>
 
     <span v-show="show">Some text(v-show)</span>
@@ -26,7 +26,7 @@
     <p>Cars</p>
 
     <ul>
-        <li v-for="(car, key) in cars">{{ key + 1 }} - {{ car.model }} / {{ car.speed }}</li>
+        <li v-for="(car, key) in cars">{{ key + 1 }} - {{ car.model | capitalize }} / {{ car.speed }}</li>
     </ul>
 </div>
 
